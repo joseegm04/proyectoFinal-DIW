@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #184042;
+  width: 100%;
+  height: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+header nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto;
+}
+header nav .logo {
+  width: 150px;
+  margin-left: 20px;
+}
+header nav .bar-btn {
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+header nav .bar-btn i {
+  font-style: normal;
+}
+header nav #check {
+  display: none;
+}
+header nav #check:checked ~ .nav-menu {
+  height: 100vh;
+}
+header nav #check:checked ~ .nav-menu li {
+  display: block;
+}
+header nav .nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  text-align: center;
+  transition: all 0.5s;
+}
+header nav .nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+header nav .nav-menu li a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bienvenida {
+  background-color: #4E4E4E;
+  color: white;
+  font-family: Roboto;
+  font-size: 13px;
+  padding: 5px;
+}
+
+section {
+  margin: 20px;
+  margin-bottom: 40px;
+}
+section h3 {
+  font-family: Roboto;
+}
+section.lanzamientos {
+  display: none;
+}
+section .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+section .cards .card {
+  display: flex;
+  flex-direction: column;
+  border: solid lightgray 1px;
+  border-radius: 3px;
+  width: 130px;
+  min-height: 100%;
+  margin: 10px;
+}
+section .cards .card.only-tablet {
+  display: none;
+}
+section .cards .card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 3px;
+}
+section .cards .card .card-body {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+section .cards .card .card-body p {
+  font-size: 13px;
+}
+section .cards .card .card-body h5, section .cards .card .card-body p {
+  padding: 5px;
+  font-family: Roboto;
+}
+section .cards .card .card-body button {
+  background-color: #184042;
+  font-family: Roboto;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  height: 40px;
+}
+section .cards .card .card-body button:hover {
+  cursor: pointer;
+  background-color: #112e2f;
+}
+
+footer {
+  background-color: #184042;
+  padding: 5%;
+}
+footer div {
+  display: flex;
+  justify-content: space-around;
+}
+footer img {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .bienvenida {
+    font-size: 20px;
+  }
+  section h3 {
+    font-size: 25px;
+  }
+  section.lanzamientos {
+    margin-left: 20px;
+    display: block;
+  }
+  section.lanzamientos .big-cards {
+    display: flex;
+    flex-direction: row;
+  }
+  section.lanzamientos .big-cards .big-card {
+    display: flex;
+    flex-direction: row;
+    border: solid lightgray 1px;
+    border-radius: 3px;
+    width: 430px;
+    height: 200px;
+    margin: 10px;
+    background-color: rgb(250, 248, 248);
+  }
+  section.lanzamientos .big-cards .big-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 3px;
+  }
+  section.lanzamientos .big-cards .big-card-body {
+    padding: 10px;
+  }
+  section.lanzamientos .big-cards .big-card-body p {
+    margin: 10px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  section .cards .card.only-tablet {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header nav {
+    height: 100px;
+  }
+  header nav .logo {
+    margin-left: 50px;
+    width: 250px;
+  }
+  header nav .bar-btn {
+    display: none;
+  }
+  header nav .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+  header nav .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+  header nav .nav-menu li a {
+    font-size: 17px;
+  }
+  .bienvenida {
+    text-align: center;
+  }
+  main .lanzamientos {
+    display: grid;
+    justify-content: center;
+  }
+  main .lanzamientos h3 {
+    font-size: 30px;
+  }
+  main .grid-container {
+    display: grid;
+    grid-template-columns: 35% 35%;
+    grid-gap: 20%;
+    justify-content: center;
+  }
+  main .grid-container section h3 {
+    font-size: 30px;
+  }
+  main .grid-container section .cards .card.only-tablet {
+    display: none;
+  }
+  main .grid-container section .cards .card.only-tablet.only-desktop {
+    display: block;
+  }
+  footer {
+    display: flex;
+    height: 100px;
+    padding: 20px;
+  }
+  footer div svg {
+    display: none;
+  }
+  footer img {
+    display: initial;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

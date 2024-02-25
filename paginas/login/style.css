@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #184042;
+  width: 100%;
+  height: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+header nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto;
+}
+header nav .logo {
+  width: 150px;
+  margin-left: 20px;
+}
+header nav .bar-btn {
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+header nav .bar-btn i {
+  font-style: normal;
+}
+header nav #check {
+  display: none;
+}
+header nav #check:checked ~ .nav-menu {
+  height: 100vh;
+}
+header nav #check:checked ~ .nav-menu li {
+  display: block;
+}
+header nav .nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  text-align: center;
+  transition: all 0.5s;
+}
+header nav .nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+header nav .nav-menu li a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+form {
+  text-align: center;
+  font-family: Roboto;
+  display: grid;
+  grid-gap: 10px;
+  margin: 20px;
+}
+form h1,
+form h4 {
+  margin-bottom: 2%;
+}
+form h1 a,
+form h4 a {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  color: #1f5255;
+}
+form input {
+  padding: 1vh;
+  font-family: Roboto;
+  margin-bottom: 10px;
+}
+form input.acceder {
+  background-color: #1f5255;
+  color: white;
+  border-radius: 5px;
+}
+form input.acceder:hover {
+  cursor: pointer;
+  background-color: #112e2f;
+}
+
+footer {
+  background-color: #184042;
+  height: 100px;
+  padding: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+footer img {
+  display: initial;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  header nav {
+    height: 100px;
+  }
+  header nav .logo {
+    margin-left: 50px;
+    width: 250px;
+  }
+  header nav .bar-btn {
+    display: none;
+  }
+  header nav .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+  header nav .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+  header nav .nav-menu li a {
+    font-size: 17px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div form {
+    text-align: center;
+    height: 50vh;
+    width: 60%;
+    margin: 20px 50px;
+  }
+  div form h1, div form h3 {
+    margin: auto;
+  }
+  div form input, div form textarea {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
